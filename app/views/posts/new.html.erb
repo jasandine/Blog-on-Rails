@@ -1,1 +1,9 @@
 <%= render 'shared/header', title: "Bloggin" %>
+<%= render 'layouts/flash' %>
+
+<%= bootstrap_form_for(@post) do |f| %>
+  <%=f.text_field :title %>
+  <%=f.text_area :text %>
+  <%=f.submit "Add post" %>
+<% end %>
+

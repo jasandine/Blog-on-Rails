@@ -1,1 +1,14 @@
-<%= render 'shared/header', title: "Bloggin" %>
+<%= render 'shared/header' %>
+
+<h1>Posts</h1>
+
+<% @posts.each do |post| %>
+  <ul>
+    <p><%= link_to post.title, post_path(post)%></p>
+  </ul>
+<% end %>
+
+<div class="btn-group">
+  <%= link_to "New Post", new_post_path, :class => "btn btn-primary" %>
+</div>
+
