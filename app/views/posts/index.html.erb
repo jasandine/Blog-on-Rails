@@ -5,6 +5,8 @@
 <% @posts.each do |post| %>
   <ul>
     <p><%= link_to post.title, post_path(post)%></p>
+    <p><%= post.created_at.strftime("%B %d, %Y")  %></p>
+
   </ul>
 <% end %>
 
