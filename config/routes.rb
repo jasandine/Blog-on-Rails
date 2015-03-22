@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  root :to => "lists#index"
+  root :to => "posts#index"
   get '/new_post' => 'posts#new'
   post '/new_post' => 'posts#create'
   resources :posts do 
