@@ -7,7 +7,7 @@ describe "the add a post process" do
     fill_in 'Text', :with => 'This is a test post.'
     click_on 'Add post'
     expect(page).to have_content "Post added!"
-
-
   end
 end
+
+
