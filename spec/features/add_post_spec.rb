@@ -1,23 +1,21 @@
-# require 'rails_helper'
+require "rails_helper"
 
-# describe "the add a post process" do
-#   let(:user) { FactoryGirl.create(:user) }
+describe "the add a post process" do
+  let(:test_user) { FactoryGirl.create(:test_user) }
 
-#   before do
-#     sign_in(user)
-#   end
+  before do
+    sign_in(user)
+  end
 
-#   it "adds a new post" do
-#     visit('/posts/new') 
-#     fill_in 'Title', :with => 'Test Post'
-#     fill_in 'Text', :with => 'This is a test post.'
-#     click_on 'Add post'
-#     expect(page).to have_content "Post added!"
-#   end
-# end
-
-
-
+  it "adds a new post" do
+    user = FactoryGirl.create(:user)
+    visit new_post_path
+    fill_in "Title", with: 'test title'
+    fill_in "Text", with: 'bs'
+    click_on "Add post"
+    expect(page).to have_content 'Post added'
+  end
+end
 
 
 
