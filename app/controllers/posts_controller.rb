@@ -33,8 +33,8 @@ class PostsController < ApplicationController
       redirect_to post_path
     else
       render :edit
+    end
   end
-end
 
   def destroy
     @post = Post.find(params[:id])

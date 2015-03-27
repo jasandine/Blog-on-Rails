@@ -1,14 +1,12 @@
-
-
 <h1>Posts</h1>
-
+<div class="post"
 <% @posts.each do |post| %>
   <ul>
     <p><%= link_to post.title, post_path(post)%></p>
     <p><%= post.created_at.strftime("%B %d, %Y")  %></p>
-
   </ul>
 <% end %>
+</div
 
 <div class="btn-group">
   <%= link_to "New Post", new_post_path, :class => "btn btn-primary" %>

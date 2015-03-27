@@ -7,7 +7,7 @@
 <p><%= @post.text %></p>
 
 <div class="btn-group">
-<%= link_to "Add a comment", new_post_comment_path(@post), :class => "btn btn-primary" %>
+  <%= link_to "Add a comment", new_post_comment_path(@post), :class => "btn btn-primary" %>
 </div>
 
 <div class="btn-group">
@@ -16,25 +16,25 @@
 
 <div class="btn-group">
   <%= link_to "Delete Post", post_path(@post), :class => "btn btn-primary",
-  :data => {:confirm => "Do you really want this?",
-            :method => "delete"} %>
-</div>
-
+                                      :data => {:confirm => "Do you really want this?",
+                                      :method => "delete"} %>
+  </div>
 
 <% if @post.comments.any? %>
   <h4>Comments:</h4>
   <ul>
     <% @post.comments.each do |comment| %>
-      <li>
-        <%= comment.text %>
-        <%= link_to "Edit", edit_post_comment_path(@post, comment) %> |
-        <%= link_to "Delete", post_comment_path(@post, comment),
-                              :data => {:confirm => "For reals?",
-                              :method => "delete"} %> 
-      </li>  
-      <% end %>
-  </ul>
-  <% end %>
+    <li>
+      <%= comment.text %>
+      <%= link_to "Edit", edit_post_comment_path(@post, comment) %> |
+      <%= link_to "Delete", post_comment_path(@post, comment),
+                                      :data => {:confirm => "For reals?",
+                                      :method => "delete"} %> 
+    </li>  
+    <% end %>
+    </ul>
+<% end %>
+
 
 <div class="btn-group">
   <%= link_to "Back", posts_path, :class => "btn btn-primary" %>
