@@ -210,6 +210,7 @@ GEM
       json (>= 1.8.0)
     warden (1.2.3)
       rack (>= 1.0)
+    warden-rspec-rails (0.1.0)
     web-console (2.1.2)
       activemodel (>= 4.0)
       binding_of_caller (>= 0.7.2)
@@ -244,4 +245,5 @@ DEPENDENCIES
   spring
   turbolinks
   uglifier
+  warden-rspec-rails
   web-console
