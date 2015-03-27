@@ -1,7 +1,7 @@
 require 'rails_helper'
 
-describe "the edit post process" do
-  it 'edits an existing post' do
+describe "the add comment process" do
+  it 'adds a comment' do
     post = Post.create(:title => "MY OPIONIONS", :text => "SO MANY!")
     visit root_path
     click_on 'MY OPIONIONS'
