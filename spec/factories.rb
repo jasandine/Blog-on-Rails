@@ -1,9 +1,7 @@
-FactoryGirl.define do  factory :user do
-    
-  end
-
-  factory(:post) do
-    title('Test')
-    text('Test_text')
+FactoryGirl.define do
+  factory(:user) do
+    sequence(:email) { |n| "user#{n}@domain.tld" }
+    password('11111111')
+    password_confirmation('11111111')
   end
 end
